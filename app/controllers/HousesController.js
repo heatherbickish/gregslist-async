@@ -1,10 +1,13 @@
+import { AppState } from "../AppState.js";
+import { api } from "../services/AxiosService.js";
 import { housesService } from "./HousesService.js";
 
 
 export class HousesController {
   constructor() {
-    console.log('🖋️🏠');
+    console.log('🏠🎮');
     this.fetchHouses()
+    AppState.on('houses', this.drawHouses)
   }
 
 
@@ -18,6 +21,12 @@ export class HousesController {
 
   }
 
+  drawHouses() {
+    console.log('🖋️🏠')
+    const houseListingsElm = document.getElementById('house-listings')
+    houseListingsElm.innerHTML = ''
+    AppState.houses.forEach(house => houseListingsElm.innerHTML += house.HouseCard)
+  }
 
 
 }
