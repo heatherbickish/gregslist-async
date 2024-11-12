@@ -9,7 +9,7 @@ export class House {
     this.imgUrl = data.imgUrl
     this.year = data.year
     this.price = data.price
-    this.description = data.description
+    this.description = data.description || ''
     this.creatorId = data.creatorId
   }
 
@@ -24,7 +24,7 @@ export class House {
            <div class="card-body">
              <p class="text-center fw-bold fs-4">
               $${this.price} 
-              <p> Built in: ${this.year} | Levels: ${this.levels}
+              <p> Built in: ${this.year}  <b>|</b>  Levels: ${this.levels}
               </p>
              </p>
              <p>
@@ -32,10 +32,9 @@ export class House {
              </p>
              <p>
              Bathrooms: ${this.bathrooms}
-             </p>
-             < class="mb-0">
+             </p class="mb-0"><em>
              ${this.description}
-              </p>
+              </em></p>
              <div class="d-flex justify-content-between">
               <p></p>
               <div>

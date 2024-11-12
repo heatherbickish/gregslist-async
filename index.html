@@ -42,6 +42,48 @@
   <main class="container">
     <!-- STUB house form -->
 
+    <form id="create-house-form" onsubmit="" class="row bg-white rounded p-3 shadow-sm my-3 g-3">
+      <div>
+        <h2>List Your House</h2>
+      </div>
+      <div class="col-md-4">
+        <label for="house-year">Built In</label>
+        <input required id="house-year" name="year" type="number" minlength="1900" maxlength="2024"
+          class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-bedrooms">Bedrooms</label>
+        <input required id="house-bedrooms" name="bedrooms" type="number" min="0" max="20" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-bathrooms">Bathrooms</label>
+        <input required id="house-year" name="year" type="number" min="0" max="20" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-imgUrl">Picture</label>
+        <input required id="house-imgrl" name="imgUrl" type="url" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-price">Price</label>
+        <input required id="house-price" name="price" type="range" min="0" max="999999999" step="70000"
+          class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-year">Year</label>
+        <input required id="house-year" name="year" type="number" minlength="1900" maxlength="2024"
+          class="form-control">
+      </div>
+      <div class="col-12">
+        <label for="house-description">Description</label>
+        <textarea name="description" id="house-description" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="text-end mt-3">
+        <button class="btn btn-primary px-4">Submit <i class="mdi mdi-plus"></i></button>
+      </div>
+    </form>
+
+
+
     <!-- ------- -->
 
     <!-- STUB houses listings -->
