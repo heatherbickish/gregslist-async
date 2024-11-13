@@ -11,6 +11,7 @@ export class House {
     this.price = data.price
     this.description = data.description || ''
     this.creatorId = data.creatorId
+    this.creator = data.creator
   }
 
 
@@ -38,8 +39,8 @@ export class House {
              <div class="d-flex justify-content-between">
               <p></p>
               <div>
-                <span></span>
-                <img class="profile-picture profile-picture-sm" src="" alt="A beautiful picture of "/>
+                <span>${this.creator.name}</span>
+                <img class="profile-picture profile-picture-sm" src="${this.creator.picture}" alt="A beautiful picture of ${this.creator.name} "/>
               </div>
              </div>
               

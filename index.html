@@ -42,14 +42,14 @@
   <main class="container">
     <!-- STUB house form -->
 
-    <form id="create-house-form" onsubmit="" class="row bg-white rounded p-3 shadow-sm my-3 g-3">
+    <form id="create-house-form" onsubmit="app.HousesController.postHouse()"
+      class="d-none row bg-white rounded p-3 shadow-sm my-3 g-3">
       <div>
         <h2>List Your House</h2>
       </div>
       <div class="col-md-4">
         <label for="house-year">Built In</label>
-        <input required id="house-year" name="year" type="number" minlength="1900" maxlength="2024"
-          class="form-control">
+        <input required id="house-year" name="year" type="number" min="1900" max="2024" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-bedrooms">Bedrooms</label>
@@ -57,20 +57,19 @@
       </div>
       <div class="col-md-4">
         <label for="house-bathrooms">Bathrooms</label>
-        <input required id="house-year" name="year" type="number" min="0" max="20" class="form-control">
+        <input required id="house-bathrooms" name="bathrooms" type="number" min="0" max="20" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="house-levels">Levels</label>
+        <input required id="house-levels" name="levels" type="number" min="-3" max="10" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-imgUrl">Picture</label>
-        <input required id="house-imgrl" name="imgUrl" type="url" class="form-control">
+        <input id="house-imgUrl" name="imgUrl" type="url" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-price">Price</label>
-        <input required id="house-price" name="price" type="range" min="0" max="999999999" step="70000"
-          class="form-control">
-      </div>
-      <div class="col-md-4">
-        <label for="house-year">Year</label>
-        <input required id="house-year" name="year" type="number" minlength="1900" maxlength="2024"
+        <input required id="house-price" name="price" type="range" min="0" max="999999999" value="70000"
           class="form-control">
       </div>
       <div class="col-12">

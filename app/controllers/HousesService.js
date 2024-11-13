@@ -4,13 +4,19 @@ import { api } from "../services/AxiosService.js"
 
 
 class HousesService {
+  deleteHouse() {
+  }
+  async postHouse(formData) {
+    const response = await api.post('api/houses', formData)
+    const createdHouse = new House(response.data)
+    AppState.houses.push(createdHouse)
+
+  }
 
 
   async fetchHouses() {
     const response = await api.get('api/houses')
-    console.log('fetching hauses', response.data)
     const houses = response.data.map(houseData => new House(houseData))
-    console.log('⭐🏠', houses)
     AppState.houses = houses
   }
 
